@@ -27,7 +27,7 @@ rm get-docker.sh
 Move `ZOUDIO_daemon.py` to `/home/pi` first.
 
 ```bash
-sudo apt install python3-pip --y
+sudo apt install python3-pip -y
 sudo pip3 install pyserial
 mkdir /home/pi/zoudio-commands
 
