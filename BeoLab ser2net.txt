@@ -1,0 +1,22 @@
+# Disable autostart of the ZOUDIO daemon.
+
+sudo apt-get install ser2net
+
+sudo nano /etc/ser2net.yaml
+
+%YAML 1.1
+---
+connection: &con01
+  accepter: tcp,12345
+  connector: serialdev,/dev/ttyUSB0,38400n81,local,dtr=off,rts=off
+  options:
+    kickolduser: true
+
+sudo systemctl disable ser2net
+
+sudo systemctl start ser2net
+
+# install com0com
+# install com2tcp
+
+sudo systemctl stop ser2net
